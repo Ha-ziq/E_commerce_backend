@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",          // modern JS features
+    "module": "commonjs",        // Node-style modules
+    // "checkJs": true,             // type-checking in JS files
+    "baseUrl": "./src",          // root folder for imports
+    "paths": {                   // alias imports (optional, popular in React/Node)
+      "@/*": ["*"]
+    }
+  },
+  "include": ["**/*"],      // only look at src folder
+  "exclude": ["node_modules"]    // ignore libraries
+}
