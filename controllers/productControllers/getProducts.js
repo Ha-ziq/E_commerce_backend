@@ -17,7 +17,7 @@ export const getProducts = (req, res) => {
 };
 
 export const getProductById = (req, res) => {
-  const { id } = req.params;
+  const id  = req.params.id || req.body.id;
   Product.findById(id)
     .then((product) => {
       if (!product)
