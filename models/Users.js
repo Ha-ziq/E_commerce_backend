@@ -15,8 +15,17 @@
     },
     passwordHash: {
       type: String,
-      required: true
+      required: false // ← new: not required for Google-auth users
     },
+    googleId: {
+    type: String,    // ← new: stores Google's unique user ID
+    default: null
+  },
+  authProvider: {
+    type: String,
+    enum: ["local", "google"],
+    default: "local" // ← new: tracks how the user signed up
+  },
     role: {
       type: String,
       enum: ["user", "admin"],
